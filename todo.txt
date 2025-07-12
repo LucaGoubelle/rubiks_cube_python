@@ -7,4 +7,6 @@ v -- solver helpers
 v - add exceptions in pyrubik
 v - add exceptions in pyminx
 v - implement mutliMoves in abs minx mover
+v - add drawerFactory
+v - Add generical scramble method
 ~ - implement first corners processors in kilominx solver
