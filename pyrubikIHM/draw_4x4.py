@@ -1,8 +1,8 @@
 from PIL import Image, ImageDraw
 from pyrubikIHM.helpers.face_drawer import FaceDrawer
+from pyrubikIHM.cube_img_drawer import CubeIMGDrawer
 
-
-class Cube4x4IMGDrawer:
+class Cube4x4IMGDrawer(CubeIMGDrawer):
     """ cube 4x4 img drawer """
 
     def __init__(self):

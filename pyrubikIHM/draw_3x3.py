@@ -1,8 +1,8 @@
 from PIL import Image, ImageDraw
 from pyrubikIHM.helpers.sticker_drawer import StickerDrawer
+from pyrubikIHM.cube_img_drawer import CubeIMGDrawer
 
-
-class Cube3x3IMGDrawer:
+class Cube3x3IMGDrawer(CubeIMGDrawer):
     """
     cube 3x3 img drawer
     @author: LucaGoubelle
