@@ -7,7 +7,7 @@ from pyrubik.data.cube_builder import CubeBuilder
 from pyrubik.moves.scrambler import CubeScrambler
 from pyrubik.display.printer import CubePrinter
 
-size_cube: int = 4
+size_cube: int = 3
 
 facto = DrawerFactory()
 builder = CubeBuilder()
