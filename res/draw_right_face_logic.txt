@@ -1,0 +1,7 @@
+x, y, size
+
+half = size / 2
+
+for i ...
+    for j ...
+         draw(img1, x+(j*half)+(j*offset), y+(i*size)+(i*offset)-((j*half)+(j*offset)), face[i][j] )

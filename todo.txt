@@ -1,0 +1,10 @@
+v - implement MinxMover abs class and type the return of MoverFactory::make()
+v - document remaining code in:
+v -- pyminx
+v -- pycube
+v -- solver helpers
+
+v - add exceptions in pyrubik
+v - add exceptions in pyminx
+v - implement mutliMoves in abs minx mover
+~ - implement first corners processors in kilominx solver
