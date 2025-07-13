@@ -6,5 +6,5 @@ class LastCentersHandler:
     """ last centers handler """
 
     def handle(self, cube: Cube) -> Cube:
-        # todo: implement this
+        # implement this
         return cube

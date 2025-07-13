@@ -28,5 +28,5 @@ class Solver5x5:
     
     def solve(self, cube: Cube) -> Cube:
         cube = self._solveCenters(cube)
-        # TODO: implement remaining lines
+        # implement remaining lines
         return cube

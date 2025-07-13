@@ -5,5 +5,5 @@ class CyanPrismHandler:
     """ cyan prism handler """
     
     def handle(self, minx: Megaminx) -> Megaminx:
-        #TODO: implement this
+        # implement this
         return minx

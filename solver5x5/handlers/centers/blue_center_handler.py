@@ -6,5 +6,5 @@ class BlueCenterHandler:
     """ blue center handler """
 
     def handle(self, cube: Cube) -> Cube:
-        # todo: implement this
+        # implement this
         return cube

@@ -17,7 +17,7 @@ class Solver2x2:
 
     def solve(self, cube: Cube) -> Cube:
         """ solve 2x2 """
-        cube = self.start_handler.start(cube)
+        cube = self.start_handler.handle(cube)
         cube = self.first_layer_handler.handle(cube)
         cube = self.last_layer_handler.handle(cube)
         return cube

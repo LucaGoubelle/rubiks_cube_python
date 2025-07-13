@@ -5,5 +5,5 @@ class LastCornersHandler:
     """last corners Handler"""
     
     def handle(self, minx: Megaminx) -> Megaminx:
-        #TODO: implement this
+        # implement this
         return minx
