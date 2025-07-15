@@ -36,8 +36,14 @@ class MegaminxScanner:
             "up_front": minx.up[0][5]+"_"+minx.front[0][1],
             "up_right": f"{minx.up[0][3]}_{minx.right[0][1]}",
             "up_left": f"{minx.up[0][7]}_{minx.left[0][1]}",
-            "up_backleft": f"{minx.up[0][9]}_{minx.back_left[0][1]}",
-            "up_backright": f"{minx.up[0][1]}_{minx.back_right[0][1]}"
+            "up_backLeft": f"{minx.up[0][9]}_{minx.back_left[0][1]}",
+            "up_backRight": f"{minx.up[0][1]}_{minx.back_right[0][1]}",
+
+            "down_downLeft": f"{minx.down[0][9]}_{minx.down_left[0][5]}",
+            "down_downRight": f"{minx.down[0][1]}_{minx.downRight[0][5]}",
+            "down_absLeft": f"{minx.down[0][7]}_{minx.abs_left[0][5]}",
+            "down_absRight": f"{minx.down[0][3]}_{minx.abs_right[0][5]}",
+            "down_back": f"{minx.down[0][5]}_{minx.back[0][5]}"
         }
         # todo: implement other dict case
         return dico[orient] if orient in dico else "???"
@@ -50,7 +56,10 @@ class MegaminxScanner:
         """
         dico: dict = {
             "up_front_right": f"{minx.up[0][4]}_{minx.front[0][2]}_{minx.right[0][0]}",
-            "up_front_left": f"{minx.up[0][6]}_{minx.front[0][0]}_{minx.left[0][2]}"
+            "up_front_left": f"{minx.up[0][6]}_{minx.front[0][0]}_{minx.left[0][2]}",
+            "up_backLeft_left": f"{minx.up[0][8]}_{minx.back_left[0][2]}_{minx.left[0][0]}",
+            "up_backRight_right": f"{minx.up[0][2]}_{minx.back_right[0][0]}_{minx.right[0][2]}",
+            "up_backLeft_backRight": f"{minx.up[0][0]}_{minx.back_left[0][0]}_{minx.back_right[0][2]}"
         }
         # todo: implement other dict case
         return dico[orient] if orient in dico else "???"
@@ -66,7 +75,13 @@ class MegaminxScanner:
             "up_right": self.scan_edge(minx, "up_right"),
             "up_left": self.scan_edge(minx, "up_left"),
             "up_backLeft": self.scan_edge(minx, "up_backLeft"),
-            "up_backRight": self.scan_edge(minx, "up_backRight")
+            "up_backRight": self.scan_edge(minx, "up_backRight"),
+
+            "down_downLeft": self.scan_edge(minx, "down_downLeft"),
+            "down_downRight": self.scan_edge(minx, "down_downRight"),
+            "down_absLeft": self.scan_edge(minx, "down_absLeft"),
+            "down_absRight": self.scan_edge(minx, "down_absRight"),
+            "down_back": self.scan_edge(minx, "down_back")
         }
 
     
@@ -77,5 +92,8 @@ class MegaminxScanner:
         """
         return {
             "up_front_left": self.scan_corner(minx, "up_front_left"),
-            "up_front_right": self.scan_corner(minx, "up_front_right")
+            "up_front_right": self.scan_corner(minx, "up_front_right"),
+            "up_backLeft_left": self.scan_corner(minx, "up_backLeft_left"),
+            "up_backRight_right": self.scan_corner(minx, "up_backRight_right"),
+            "up_backLeft_backRight": self.scan_corner(minx, "up_backLeft_backRight")
         }
