@@ -59,7 +59,25 @@ class MegaminxScanner:
             "up_front_left": f"{minx.up[0][6]}_{minx.front[0][0]}_{minx.left[0][2]}",
             "up_backLeft_left": f"{minx.up[0][8]}_{minx.back_left[0][2]}_{minx.left[0][0]}",
             "up_backRight_right": f"{minx.up[0][2]}_{minx.back_right[0][0]}_{minx.right[0][2]}",
-            "up_backLeft_backRight": f"{minx.up[0][0]}_{minx.back_left[0][0]}_{minx.back_right[0][2]}"
+            "up_backLeft_backRight": f"{minx.up[0][0]}_{minx.back_left[0][0]}_{minx.back_right[0][2]}",
+
+            "front_downLeft_downRight": "???_???_???",
+            "left_downLeft_absLeft": "???_???_???",
+            "right_downRight_absRight": "???_???_???",
+            "backLeft_back_absLeft": "???_???_???",
+            "backRight_back_absRight": "???_???_???",
+
+            "front_downLeft_left": "???_???_???",
+            "front_downRight_right": "???_???_???",
+            "backRight_absRight_right": "???_???_???",
+            "backLeft_absLeft_left": "???_???_???",
+            "back_backLeft_backRight": "???_???_???",
+
+            "down_downLeft_downRight": "???_???_???",
+            "down_downLeft_absLeft": "???_???_???",
+            "down_downRight_absRight": "???_???_???",
+            "down_back_absLeft": "???_???_???",
+            "down_back_absRight": "???_???_???"
         }
         # todo: implement other dict case
         return dico[orient] if orient in dico else "???"

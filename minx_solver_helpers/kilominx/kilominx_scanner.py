@@ -13,6 +13,18 @@ class KilominxScanner:
             "up_backright_right": f"{minx.up[1]}_{minx.back_right[0]}_{minx.right[1]}",
             "up_backleft_backright": f"{minx.up[0]}_{minx.back_left[0]}_{minx.back_right[1]}",
 
+            "front_downLeft_downRight": "???_???_???",
+            "left_downLeft_absLeft": "???_???_???",
+            "right_downRight_absRight": "???_???_???",
+            "backLeft_back_absLeft": "???_???_???",
+            "backRight_back_absRight": "???_???_???",
+
+            "front_downLeft_left": "???_???_???",
+            "front_downRight_right": "???_???_???",
+            "backRight_absRight_right": "???_???_???",
+            "backLeft_absLeft_left": "???_???_???",
+            "back_backLeft_backRight": "???_???_???",
+
             "down_downLeft_downRight": f"{minx.down[0]}_{minx.down_left[2]}_{minx.down_right[3]}",
             "down_downLeft_absLeft": f"{minx.down[4]}_{minx.down_left[3]}_{minx.abs_left[2]}",
             "down_downRight_absRight": f"{minx.down[1]}_{minx.down_right[2]}_{minx.abs_right[3]}",
