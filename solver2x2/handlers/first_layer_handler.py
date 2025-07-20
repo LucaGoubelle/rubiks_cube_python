@@ -2,6 +2,8 @@
 
 from pyrubik.data.cube import Cube
 from pyrubik.moves.mover import Mover
+from solver2x2.processors.first_face.wbo_processor import WBOProcessor
+from solver2x2.processors.first_face.wgo_processor import WGOProcessor
 from solver2x2.processors.first_face.wgr_processor import WGRProcessor
 from solver_helpers.seekers.corner_2_seeker import Corner2Seeker
 
@@ -11,6 +13,8 @@ class FirstLayerHandler:
     def __init__(self):
         self.mover = Mover()
         self.wgr_proc = WGRProcessor()
+        self.wgo_proc = WGOProcessor()
+        self.wbo_proc = WBOProcessor()
         self.seeker = Corner2Seeker()
     
     def handle(self, cube: Cube) -> Cube:
@@ -31,12 +35,24 @@ class FirstLayerHandler:
     
     
     def _insertWGO(self, cube: Cube) -> Cube:
-        # TODO: implement this method
+        input_data: str = self.seeker.seek_corner(cube, [
+            "white_green_orange", "white_orange_green",
+            "green_white_orange", "green_orange_white",
+            "orange_white_green", "orange_green_white"
+        ])
+        sequence: str = self.wgo_proc.process(input_data)
+        cube = self.mover.multi_moves(cube, sequence)
         return cube
     
     
     def _insertWBO(self, cube: Cube) -> Cube:
-        # TODO: implement this method
+        input_data: str = self.seeker.seek_corner(cube, [
+            "white_blue_orange", "white_orange_blue",
+            "blue_white_orange", "blue_orange_white",
+            "orange_white_blue", "orange_blue_white"
+        ])
+        sequence: str = self.wbo_proc.process(input_data)
+        cube = self.mover.multi_moves(cube, sequence)
         return cube
     
     
