@@ -1,12 +1,12 @@
 
 class WBRProcessor:
-    """ white blue red processor """
-    
+    """ White blue red processor """
+
     def __init__(self):
         self.data = {
-            "up_front_right::white_red_blue": "U' R2",
-            "up_front_right::blue_white_red": "R'",
-            "up_front_right::red_blue_white": "F",
+            "up_front_right::white_red_blue" : "U' R2",
+            "up_front_right::blue_white_red" : "R'",
+            "up_front_right::red_blue_white" : "F",
 
             "up_front_left::white_blue_red" : "F2",
             "up_front_left::red_white_blue" : "U' F",
@@ -36,7 +36,6 @@ class WBRProcessor:
             "down_front_right::red_white_blue" : "R' D'",
             "down_front_right::blue_red_white" : "F D"
         }
-        
     def process(self, input_data: str) -> str:
         result: str = self.data[input_data] if input_data in self.data else "???"
         return result

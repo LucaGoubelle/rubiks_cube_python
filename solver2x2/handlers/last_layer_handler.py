@@ -24,7 +24,7 @@ class LastLayerHandler:
 
     
     def handle(self, cube: Cube) -> Cube:
-        cube = LastLayerHandler._oll(cube)
-        cube = LastLayerHandler._pll(cube)
-        cube = LastLayerHandler._auf(cube)
+        cube = self._oll(cube)
+        cube = self._pll(cube)
+        cube = self._auf(cube)
         return cube

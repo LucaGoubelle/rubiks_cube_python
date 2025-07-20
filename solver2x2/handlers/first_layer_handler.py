@@ -38,3 +38,10 @@ class FirstLayerHandler:
     def _insertWBO(self, cube: Cube) -> Cube:
         # TODO: implement this method
         return cube
+    
+    
+    def handle(self, cube: Cube) -> Cube:
+        cube = self._insertWGR(cube)
+        cube = self._insertWGO(cube)
+        cube = self._insertWBO(cube)
+        return cube
