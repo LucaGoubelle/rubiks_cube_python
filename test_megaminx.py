@@ -1,7 +1,7 @@
 """ test megaminx """
 from pyminx.data.minx_dumper import MinxDumper
 from pyminx.data.minx_factory import MinxFactory
-from pyminxIHM.draw_megaminx import MegaminxDrawer
+from pyminxIHM.img_drawers.img_draw_megaminx import MegaminxDrawer
 
 facto = MinxFactory()
 dumper = MinxDumper()

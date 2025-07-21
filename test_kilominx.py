@@ -1,7 +1,7 @@
 """ test kilominx """
 from pyminx.data.minx_factory import MinxFactory
 from pyminx.moves.kilominx.kilominx_mover import KilominxMover
-from pyminxIHM.draw_kilominx import KilominxDrawer
+from pyminxIHM.img_drawers.img_draw_kilominx import KilominxDrawer
 
 facto = MinxFactory()
 drawer = KilominxDrawer()

@@ -1,6 +1,6 @@
 """ test master kilominx """
 from pyminx.data.minx_factory import MinxFactory
-from pyminxIHM.draw_master_kilominx import MasterKilominxDrawer
+from pyminxIHM.img_drawers.img_draw_master_kilominx import MasterKilominxDrawer
 
 facto = MinxFactory()
 drawer = MasterKilominxDrawer()
