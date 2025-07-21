@@ -1,12 +1,12 @@
 from PIL import Image, ImageDraw
-from pyrubikIHM.helpers.face_drawer import FaceDrawer
-from pyrubikIHM.cube_img_drawer import CubeIMGDrawer
+from pyrubikIHM.helpers.img_face_drawer import IMGFaceDrawer
+from pyrubikIHM.img_drawers.cube_img_drawer import CubeIMGDrawer
 
 class Cube5x5IMGDrawer(CubeIMGDrawer):
     """ cube 5x5 img drawer """
 
     def __init__(self):
-        self.face_drawer = FaceDrawer()
+        self.face_drawer = IMGFaceDrawer()
         self.size = 30
 
     def _draw_front_face(self, img1, cube):

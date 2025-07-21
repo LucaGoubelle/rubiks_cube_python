@@ -1,7 +1,7 @@
 """ sticker drawer """
 
 
-class StickerDrawer:
+class IMGStickerDrawer:
     """
     sticker drawer
     @author: LucaGoubelle

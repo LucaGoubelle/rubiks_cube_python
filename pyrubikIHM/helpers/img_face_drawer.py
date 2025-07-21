@@ -1,15 +1,15 @@
 """ face drawer """
-from pyrubikIHM.helpers.sticker_drawer import StickerDrawer
+from pyrubikIHM.helpers.img_sticker_drawer import IMGStickerDrawer
 
 
-class FaceDrawer:
+class IMGFaceDrawer:
     """
     face drawer
     @author: LucaGoubelle
     """
 
     def __init__(self):
-        self.sticker_drawer = StickerDrawer()
+        self.sticker_drawer = IMGStickerDrawer()
 
     def draw_front_face(self, img1, face, x, y, size=50, offset=5):
         """

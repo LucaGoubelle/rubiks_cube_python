@@ -1,12 +1,12 @@
 
-from pyrubikIHM.helpers.face_drawer import FaceDrawer
-from pyrubikIHM.cube_img_drawer import CubeIMGDrawer
+from pyrubikIHM.helpers.img_face_drawer import IMGFaceDrawer
+from pyrubikIHM.img_drawers.cube_img_drawer import CubeIMGDrawer
 
 class Cube7x7IMGDrawer(CubeIMGDrawer):
     """ cube 7x7 img drawer """
 
     def __init__(self):
-        self.face_drawer = FaceDrawer()
+        self.face_drawer = IMGFaceDrawer()
         self.front_coord = {"x": 100, "y": 105}
         self.right_coord = {"x": 275, "y": 105}
         self.up_coord = {"x": 200, "y": 0}
