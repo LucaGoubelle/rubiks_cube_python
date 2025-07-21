@@ -4,14 +4,16 @@ from pyrubikIHM.drawer_factory import DrawerFactory
 
 from pyrubik.data.cube import Cube
 from pyrubik.data.cube_builder import CubeBuilder
+from pyrubik.data.cube_dumper import CubeDumper
 from pyrubik.moves.scrambler import CubeScrambler
 from pyrubik.display.printer import CubePrinter
 
-size_cube: int = 7
+size_cube: int = 3
 
 facto = DrawerFactory()
 builder = CubeBuilder()
 printer = CubePrinter()
+dumper = CubeDumper()
 scrambler = CubeScrambler()
 drawer = facto.make(size_cube)
 
@@ -26,3 +28,4 @@ cube = scrambler.scramble(cube)
 printer.print_cube(cube)
 drawer.draw(cube)
 
+print(dumper.dump_to_xml(cube))
