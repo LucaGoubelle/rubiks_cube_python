@@ -18,8 +18,8 @@ class WhiteMiddleBarHandler:
     def _handle_first_center_edge(self, cube: Cube) -> Cube:
         count: int = 0
         while count < 4:
-            result: str = self.centerSeeker.seekCenterEdge(cube, "front", "white")
-            result2: str = self.centerSeeker.seekCenterEdge(cube, "up", "white")
+            result: str = self.center_seeker.seek_center_edge(cube, "front", "white")
+            result2: str = self.center_seeker.seek_center_edge(cube, "up", "white")
             # map front
             hmap = {}
             hmap["front::up"] = "F Rw' D2"
@@ -35,21 +35,21 @@ class WhiteMiddleBarHandler:
             hmap["up::left"] = "U2 Rw2 D2"
 
             if result in hmap:
-                cube = self.mover.multiMoves(cube, hmap[result])
+                cube = self.mover.multi_moves(cube, hmap[result])
                 break
             elif result2 in hmap2:
-                cube = self.mover.multiMoves(cube, hmap2[result2])
+                cube = self.mover.multi_moves(cube, hmap2[result2])
                 break
             else:
-                cube = self.mover.multiMoves(cube, "D y")
+                cube = self.mover.multi_moves(cube, "D y")
                 count += 1
         return cube
     
     def _handle_second_center_edge(self, cube: Cube) -> Cube:
         count: int = 0
         while count < 4 :
-            result: str = self.centerSeeker.seekCenterEdge(cube, "front", "white")
-            result2: str = self.centerSeeker.seekCenterEdge(cube, "up", "white")
+            result: str = self.center_seeker.seek_center_edge(cube, "front", "white")
+            result2: str = self.center_seeker.seek_center_edge(cube, "up", "white")
             # map front
             hmap = {}
             hmap["front::up"] = "F Rw' D"
@@ -65,13 +65,13 @@ class WhiteMiddleBarHandler:
             hmap["up::left"] = "U2 Rw2 D"
 
             if result in hmap:
-                cube = self.mover.multiMoves(cube, hmap[result])
+                cube = self.mover.multi_moves(cube, hmap[result])
                 break
             elif result2 in hmap2:
-                cube = self.mover.multiMoves(cube, hmap2[result2])
+                cube = self.mover.multi_moves(cube, hmap2[result2])
                 break
             else:
-                cube = self.mover.multiMoves(cube, "D y")
+                cube = self.mover.multi_moves(cube, "D y")
                 count += 1
             
         return cube

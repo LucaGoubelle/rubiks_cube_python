@@ -10,7 +10,9 @@ from pyrubik.display.printer import CubePrinter
 builder = CubeBuilder()
 printer = CubePrinter()
 scrambler = CubeScrambler()
-cube: Cube = builder.build(5)
+
+size_cube: int = 5
+cube: Cube = builder.build(size_cube)
 solver: Solver5x5 = Solver5x5()
 
 # first we scramble the cube

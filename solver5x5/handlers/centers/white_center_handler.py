@@ -20,10 +20,10 @@ class WhiteCenterHandler:
     def _do_middle_bar(self, cube: Cube) -> Cube:
         return self.middle_bar_handler.handle(cube)
 
-    def _do_first_bar(cube: Cube) -> Cube:
+    def _do_first_bar(self, cube: Cube) -> Cube:
         # TODO: implement this
         return cube
     
-    def _do_second_bar(cube: Cube) -> Cube:
+    def _do_second_bar(self, cube: Cube) -> Cube:
         # TODO: implement this
         return cube
