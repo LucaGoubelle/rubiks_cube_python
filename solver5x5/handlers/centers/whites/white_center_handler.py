@@ -1,7 +1,7 @@
 """ white center handler """
 from pyrubik.data.cube import Cube
 from pyrubik.moves.mover import Mover
-from solver5x5.handlers.centers.white_middle_bar_handler import WhiteMiddleBarHandler
+from solver5x5.handlers.centers.whites.white_middle_bar_handler import WhiteMiddleBarHandler
 
 
 class WhiteCenterHandler:

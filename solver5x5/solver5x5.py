@@ -1,7 +1,7 @@
 """ solver 5x5 """
 from pyrubik.data.cube import Cube
 
-from solver5x5.handlers.centers.white_center_handler import WhiteCenterHandler
+from solver5x5.handlers.centers.whites.white_center_handler import WhiteCenterHandler
 from solver5x5.handlers.centers.yellow_center_handler import YellowCenterHandler
 from solver5x5.handlers.centers.blue_center_handler import BlueCenterHandler
 from solver5x5.handlers.centers.red_center_handler import RedCenterHandler
