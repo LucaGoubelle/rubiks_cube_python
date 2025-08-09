@@ -13,6 +13,7 @@ class WhiteMiddleBarHandler:
     def handle(self, cube: Cube) -> Cube:
         cube = self._handle_first_center_edge(cube)
         cube = self._handle_second_center_edge(cube)
+        cube = self.mover.simple_move(cube, "D")
         return cube
         
     def _handle_first_center_edge(self, cube: Cube) -> Cube:
