@@ -1,5 +1,5 @@
 """ test pygame view """
-from pyrubikIHM.views.pg_3x3_view import Pygame3x3View
+from pyrubikIHM.views.pg_5x5_view import Pygame5x5View
 
-pg_view = Pygame3x3View("test01")
+pg_view = Pygame5x5View("test01")
 pg_view.run()
