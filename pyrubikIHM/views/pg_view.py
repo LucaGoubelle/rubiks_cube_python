@@ -19,6 +19,7 @@ class PGView:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
+                self._handle_events(event)
             
             self.screen.fill(self.bgcolor)
             self._render()
@@ -26,4 +27,7 @@ class PGView:
             self.clock.tick(60)
 
     def _render(self):
+        pass
+
+    def _handle_events(self, event):
         pass
