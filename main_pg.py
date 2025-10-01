@@ -6,7 +6,7 @@ from pyrubikIHM.views.pg_5x5_view import Pygame5x5View
 from pyrubikIHM.views.pg_6x6_view import Pygame6x6View
 from pyrubikIHM.views.pg_7x7_view import Pygame7x7View
 
-size: int = 5
+size: int = 3
 
 match size:
     case 2:
