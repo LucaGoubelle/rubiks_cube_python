@@ -1,19 +1,19 @@
 """ w moves """
-from pyrubik.data.cube import Cube
-from pyrubik.moves.helpers.move_helpers import MoveHelpers, Face
+from pyrubik.data.cube import Cube, Face
+from pyrubik.moves.moves import Moves
 
-class WMoves:
+class WMoves(Moves):
     """ w moves """
 
     def move_Uw(self, cube: Cube, nb_layer:int = 2) -> Cube:
         """ move Up 2 layers face """
         size: int = len(cube.up)
-        cube.up = MoveHelpers.rotate(cube.up)
+        cube.up = self.rh.rotate(cube.up)
 
-        new_front: Face = MoveHelpers.gen_empty_face(size)
-        new_left: Face = MoveHelpers.gen_empty_face(size)
-        new_right: Face = MoveHelpers.gen_empty_face(size)
-        new_back: Face = MoveHelpers.gen_empty_face(size)
+        new_front: Face = self.rh.gen_empty_face(size)
+        new_left: Face = self.rh.gen_empty_face(size)
+        new_right: Face = self.rh.gen_empty_face(size)
+        new_back: Face = self.rh.gen_empty_face(size)
 
         for i in range(size):
             for j in range(nb_layer):
@@ -22,10 +22,10 @@ class WMoves:
                 new_right[j][i] = cube.back[j][i]
                 new_back[j][i] = cube.left[j][i]
 
-        cube.front = MoveHelpers.transfert(cube.front, new_front)
-        cube.left = MoveHelpers.transfert(cube.left, new_left)
-        cube.right = MoveHelpers.transfert(cube.right, new_right)
-        cube.back = MoveHelpers.transfert(cube.back, new_back)
+        cube.front = self.rh.transfert(cube.front, new_front)
+        cube.left = self.rh.transfert(cube.left, new_left)
+        cube.right = self.rh.transfert(cube.right, new_right)
+        cube.back = self.rh.transfert(cube.back, new_back)
 
         return cube
 
@@ -47,12 +47,12 @@ class WMoves:
     def move_Dw(self, cube: Cube, nb_layer:int = 2) -> Cube:
         """ move Down face 2 layers """
         size: int = len(cube.up)
-        cube.down = MoveHelpers.rotate(cube.down)
+        cube.down = self.rh.rotate(cube.down)
 
-        new_front: Face = MoveHelpers.gen_empty_face(size)
-        new_left: Face = MoveHelpers.gen_empty_face(size)
-        new_right: Face = MoveHelpers.gen_empty_face(size)
-        new_back: Face = MoveHelpers.gen_empty_face(size)
+        new_front: Face = self.rh.gen_empty_face(size)
+        new_left: Face = self.rh.gen_empty_face(size)
+        new_right: Face = self.rh.gen_empty_face(size)
+        new_back: Face = self.rh.gen_empty_face(size)
 
         for i in range(size):
             for j in range(nb_layer):
@@ -61,10 +61,10 @@ class WMoves:
                 new_right[size - 1 - j][i] = cube.front[size - 1 - j][i]
                 new_back[size - 1 - j][i] = cube.right[size - 1 - j][i]
 
-        cube.front = MoveHelpers.transfert(cube.front, new_front)
-        cube.left = MoveHelpers.transfert(cube.left, new_left)
-        cube.right = MoveHelpers.transfert(cube.right, new_right)
-        cube.back = MoveHelpers.transfert(cube.back, new_back)
+        cube.front = self.rh.transfert(cube.front, new_front)
+        cube.left = self.rh.transfert(cube.left, new_left)
+        cube.right = self.rh.transfert(cube.right, new_right)
+        cube.back = self.rh.transfert(cube.back, new_back)
 
         return cube
 
@@ -86,12 +86,12 @@ class WMoves:
     def move_Lw(self, cube: Cube, nb_layer:int=2) -> Cube:
         """ move Left face 2 layers """
         size: int = len(cube.left)
-        cube.left = MoveHelpers.rotate(cube.left)
+        cube.left = self.rh.rotate(cube.left)
 
-        new_up: Face = MoveHelpers.gen_empty_face(size)
-        new_front: Face = MoveHelpers.gen_empty_face(size)
-        new_down: Face = MoveHelpers.gen_empty_face(size)
-        new_back: Face = MoveHelpers.gen_empty_face(size)
+        new_up: Face = self.rh.gen_empty_face(size)
+        new_front: Face = self.rh.gen_empty_face(size)
+        new_down: Face = self.rh.gen_empty_face(size)
+        new_back: Face = self.rh.gen_empty_face(size)
 
         for i in range(size):
             for j in range(nb_layer):
@@ -100,10 +100,10 @@ class WMoves:
                 new_back[i][j] = cube.down[i][j]
                 new_up[i][size - 1 - j] = cube.back[i][size - 1 - j]
 
-        cube.front = MoveHelpers.transfert(cube.front, new_front)
-        cube.up = MoveHelpers.transfert(cube.up, MoveHelpers.rotate_twice(new_up))
-        cube.down = MoveHelpers.transfert(cube.down, new_down)
-        cube.back = MoveHelpers.transfert(cube.back, MoveHelpers.rotate_twice(new_back))
+        cube.front = self.rh.transfert(cube.front, new_front)
+        cube.up = self.rh.transfert(cube.up, self.rh.rotate_twice(new_up))
+        cube.down = self.rh.transfert(cube.down, new_down)
+        cube.back = self.rh.transfert(cube.back, self.rh.rotate_twice(new_back))
 
         return cube
 
@@ -126,12 +126,12 @@ class WMoves:
     def move_Rw(self, cube: Cube, nb_layer:int=2) -> Cube:
         """ move Right face 2 layers """
         size: int = len(cube.right)
-        cube.right = MoveHelpers.rotate(cube.right)
+        cube.right = self.rh.rotate(cube.right)
 
-        new_front: Face = MoveHelpers.gen_empty_face(size)
-        new_up: Face = MoveHelpers.gen_empty_face(size)
-        new_back: Face = MoveHelpers.gen_empty_face(size)
-        new_down: Face = MoveHelpers.gen_empty_face(size)
+        new_front: Face = self.rh.gen_empty_face(size)
+        new_up: Face = self.rh.gen_empty_face(size)
+        new_back: Face = self.rh.gen_empty_face(size)
+        new_down: Face = self.rh.gen_empty_face(size)
 
         for i in range(size):
             for j in range(nb_layer):
@@ -140,10 +140,10 @@ class WMoves:
                 new_back[i][size - 1 - j] = cube.up[i][size - 1 - j]
                 new_down[i][j] = cube.back[i][j]
 
-        cube.front = MoveHelpers.transfert(cube.front, new_front)
-        cube.up = MoveHelpers.transfert(cube.up, new_up)
-        cube.back = MoveHelpers.transfert(cube.back, MoveHelpers.rotate_twice(new_back))
-        cube.down = MoveHelpers.transfert(cube.down, MoveHelpers.rotate_twice(new_down))
+        cube.front = self.rh.transfert(cube.front, new_front)
+        cube.up = self.rh.transfert(cube.up, new_up)
+        cube.back = self.rh.transfert(cube.back, self.rh.rotate_twice(new_back))
+        cube.down = self.rh.transfert(cube.down, self.rh.rotate_twice(new_down))
 
         return cube
 
@@ -165,12 +165,12 @@ class WMoves:
     def move_Fw(self, cube: Cube, nb_layer:int=2) -> Cube:
         """ move Front face twice """
         size: int = len(cube.front)
-        cube.front = MoveHelpers.rotate(cube.front)
+        cube.front = self.rh.rotate(cube.front)
 
-        new_up: Face = MoveHelpers.gen_empty_face(size)
-        new_left: Face = MoveHelpers.gen_empty_face(size)
-        new_right: Face = MoveHelpers.gen_empty_face(size)
-        new_down: Face = MoveHelpers.gen_empty_face(size)
+        new_up: Face = self.rh.gen_empty_face(size)
+        new_left: Face = self.rh.gen_empty_face(size)
+        new_right: Face = self.rh.gen_empty_face(size)
+        new_down: Face = self.rh.gen_empty_face(size)
 
         for i in range(size):
             for j in range(nb_layer):
@@ -179,10 +179,10 @@ class WMoves:
                 new_right[size - 1 - j][i] = cube.up[size - 1 - j][i]
                 new_down[i][j] = cube.right[i][j]
 
-        cube.up = MoveHelpers.transfert(cube.up, MoveHelpers.rotate(new_up))
-        cube.left = MoveHelpers.transfert(cube.left, MoveHelpers.rotate(new_left))
-        cube.right = MoveHelpers.transfert(cube.right, MoveHelpers.rotate(new_right))
-        cube.down = MoveHelpers.transfert(cube.down, MoveHelpers.rotate(new_down))
+        cube.up = self.rh.transfert(cube.up, self.rh.rotate(new_up))
+        cube.left = self.rh.transfert(cube.left, self.rh.rotate(new_left))
+        cube.right = self.rh.transfert(cube.right, self.rh.rotate(new_right))
+        cube.down = self.rh.transfert(cube.down, self.rh.rotate(new_down))
 
         return cube
 

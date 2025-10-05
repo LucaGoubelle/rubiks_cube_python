@@ -2,7 +2,7 @@
 from pyrubik.data.cube import Cube
 from pyrubik.exceptions.cube_mover_exception import CubeMoverException
 from pyrubik.moves.axis_moves import AxisMoves
-from pyrubik.moves.moves import STDMoves
+from pyrubik.moves.std_moves import STDMoves
 from pyrubik.moves.wmoves import WMoves
 
 class Mover:
