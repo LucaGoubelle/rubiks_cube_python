@@ -1,20 +1,20 @@
 """ start handler """
 
 from pyrubik.data.cube import Cube
-from pyrubik.moves.mover import Mover
 
 from solver_helpers.scanners.cube_2x2_scanner import Cube2x2Scanner
 from solver_helpers.seekers.corner_2_seeker import Corner2Seeker
 
 from solver2x2.processors.first_face.wbr_processor import WBRProcessor
+from solver2x2.handlers.handler import Handler
 
 
-class StartHandler:
+class StartHandler(Handler):
     """ Start handler """
 
     def __init__(self):
+        super().__init__()
         self.cube_scanner = Cube2x2Scanner()
-        self.mover = Mover()
         self.seeker = Corner2Seeker()
         self.wbr_proc = WBRProcessor()
     

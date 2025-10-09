@@ -1,17 +1,19 @@
 """ first layer handler """
 
 from pyrubik.data.cube import Cube
-from pyrubik.moves.mover import Mover
+
 from solver2x2.processors.first_face.wbo_processor import WBOProcessor
 from solver2x2.processors.first_face.wgo_processor import WGOProcessor
 from solver2x2.processors.first_face.wgr_processor import WGRProcessor
+from solver2x2.handlers.handler import Handler
+
 from solver_helpers.seekers.corner_2_seeker import Corner2Seeker
 
-class FirstLayerHandler:
+class FirstLayerHandler(Handler):
     """ first layer handler """
 
     def __init__(self):
-        self.mover = Mover()
+        super().__init__()
         self.wgr_proc = WGRProcessor()
         self.wgo_proc = WGOProcessor()
         self.wbo_proc = WBOProcessor()
