@@ -1,17 +1,18 @@
 """ start handler """
 from pyminx.data.models.kilominx import Kilominx
-from pyminx.moves.kilominx.kilominx_mover import KilominxMover
+
 from minx_solver_helpers.kilominx.kilominx_scanner import KilominxScanner
 from minx_solver_helpers.kilominx.kilominx_corner_seeker import KilominxCornerSeeker
+
 from solver_kilominx.processors.first_corners.wbr_processor import WBRProcessor
+from solver_kilominx.handlers.handler import Handler
 
-
-class StartHandler:
+class StartHandler(Handler):
     """ start handler """
 
     def __init__(self):
+        super().__init__()
         self.scanner = KilominxScanner()
-        self.mover = KilominxMover()
         self.seeker = KilominxCornerSeeker()
         self.processor = WBRProcessor()
 

@@ -1,18 +1,17 @@
 """ start handler """
 from pyminx.data.models.megaminx import Megaminx
-from pyminx.moves.megaminx.megaminx_mover import MegaminxMover
 
 from minx_solver_helpers.megaminx.megaminx_scanner import MegaminxScanner
 from solver_megaminx.processors.center_orient_processor import CenterOrientProcessor
+from solver_megaminx.handlers.handler import Handler
 
-class StartHandler:
+class StartHandler(Handler):
     """ start handler """
-
     
     def __init__(self):
+        super().__init__()
         self.scanner = MegaminxScanner()
         self.processor = CenterOrientProcessor()
-        self.mover = MegaminxMover()
 
     
     def handle(self, minx: Megaminx) -> Megaminx:
