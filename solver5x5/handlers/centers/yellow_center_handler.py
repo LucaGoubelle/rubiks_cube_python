@@ -1,10 +1,12 @@
 """ yellow center handler """
 from pyrubik.data.cube import Cube
+from solver5x5.handlers.handler import Handler
 
-
-class YellowCenterHandler:
+class YellowCenterHandler(Handler):
     """ yellow center handler """
-
+    
+    def __init__(self):
+        super().__init__()
     
     def handle(self, cube: Cube) -> Cube:
         # implement this

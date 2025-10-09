@@ -2,15 +2,15 @@
 from typing import Dict
 
 from pyrubik.data.cube import Cube
-from pyrubik.moves.mover import Mover
+from solver3x3.handlers.handler import Handler
 from solver_helpers.scanners.cube_3x3_scanner import Cube3x3Scanner
 
 
-class StartHandler:
+class StartHandler(Handler):
     """ Start handler """
 
     def __init__(self):
-        self.mover = Mover()
+        super().__init__()
         self.cube_scanner = Cube3x3Scanner()
     
     def start(self, cube: Cube) -> Cube:

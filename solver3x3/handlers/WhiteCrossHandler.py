@@ -1,14 +1,14 @@
 """ white cross handler """
 
 from pyrubik.data.cube import Cube
-from pyrubik.moves.mover import Mover
+from solver3x3.handlers.handler import Handler
 from solver_helpers.scanners.cube_3x3_scanner import Cube3x3Scanner
 
-class WhiteCrossHandler:
+class WhiteCrossHandler(Handler):
     """ white cross handler """
 
     def __init__(self):
-        self.mover = Mover()
+        super().__init__()
         self.cube_scanner = Cube3x3Scanner()
     
     
@@ -42,8 +42,7 @@ class WhiteCrossHandler:
         hmap["back_left"] = "L2 F'"
         hmap["back_right"] = "R2 F"
         
-        mover = Mover()
-        return mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
+        return self.mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
 
     
     def _insertWB(self, cube: Cube) -> Cube:
@@ -75,8 +74,7 @@ class WhiteCrossHandler:
         hmap["back_right"] = "R"
 
         # do the moves for inserting the piece
-        mover = Mover()
-        return mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
+        return self.mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
     
     
     def _insertWR(self, cube: Cube) -> Cube:
@@ -107,8 +105,7 @@ class WhiteCrossHandler:
         hmap["back_right"] = "y R' y'"
 
         # do the moves for inserting the piece
-        mover = Mover()
-        return mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
+        return self.mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
     
     
     def _insertWG(self, cube: Cube) -> Cube:
@@ -138,8 +135,7 @@ class WhiteCrossHandler:
         hmap["back_right"] = "D2 R D2"
 
         # do the moves for inserting the piece
-        mover = Mover()
-        return mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
+        return self.mover.multi_moves(cube, hmap[targeted_orient]) if targeted_orient in hmap else cube
     
     
     def _insertWO(self, cube: Cube) -> Cube:

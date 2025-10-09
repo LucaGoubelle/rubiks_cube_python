@@ -1,14 +1,14 @@
 from pyrubik.data.cube import Cube
-from pyrubik.moves.mover import Mover
+from solver5x5.handlers.handler import Handler
 from solver_helpers.seekers.center_5_seeker import Center5Seeker
 
 
-class WhiteSideBarHandler:
+class WhiteSideBarHandler(Handler):
     """ white side bars handler """
     
     def __init__(self):
+        super().__init__()
         self.center_seeker = Center5Seeker()
-        self.mover = Mover()
 
     def handle(self, cube: Cube) -> Cube:
         cube = self._do_first_side_bar(cube)

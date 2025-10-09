@@ -1,10 +1,13 @@
 """ second layer handler """
 
 from pyrubik.data.cube import Cube
+from solver3x3.handlers.handler import Handler
 
-class SecondLayerHandler:
+class SecondLayerHandler(Handler):
     """ second layer handler """
 
+    def __init__(self):
+        super().__init__()
     
     def _insertBR(self, cube: Cube) -> Cube:
         # TODO: implement this method

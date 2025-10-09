@@ -1,11 +1,14 @@
 """ first layer handler """
 
 from pyrubik.data.cube import Cube
+from solver3x3.handlers.handler import Handler
 
 
-class FirstLayerHandler:
+class FirstLayerHandler(Handler):
     """ first layer handler """
-
+    
+    def __init__(self):
+        super().__init__()
     
     def _insertWBR(self, cube: Cube) -> Cube:
         # TODO: implement this method

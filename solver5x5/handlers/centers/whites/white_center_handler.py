@@ -1,14 +1,14 @@
 """ white center handler """
 from pyrubik.data.cube import Cube
-from pyrubik.moves.mover import Mover
+from solver5x5.handlers.handler import Handler
 from solver5x5.handlers.centers.whites.white_middle_bar_handler import WhiteMiddleBarHandler
 
 
-class WhiteCenterHandler:
+class WhiteCenterHandler(Handler):
     """ white center handler """
 
     def __init__(self):
-        self.mover = Mover()
+        super().__init__()
         self.middle_bar_handler = WhiteMiddleBarHandler()
 
     def handle(self, cube: Cube) -> Cube:
