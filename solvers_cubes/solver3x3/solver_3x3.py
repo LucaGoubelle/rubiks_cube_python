@@ -2,12 +2,12 @@
 
 from pyrubik.data.cube import Cube
 
-from solver3x3.handlers.StartHandler import StartHandler
-from solver3x3.handlers.WhiteCrossHandler import WhiteCrossHandler
-from solver3x3.handlers.FirstLayerHandler import FirstLayerHandler
-from solver3x3.handlers.SecondLayerHandler import SecondLayerHandler
-from solver3x3.handlers.YellowCrossHandler import YellowCrossHandler
-from solver3x3.handlers.LastCornersHandler import LastCornersHandler 
+from solvers_cubes.solver3x3.handlers.StartHandler import StartHandler
+from solvers_cubes.solver3x3.handlers.WhiteCrossHandler import WhiteCrossHandler
+from solvers_cubes.solver3x3.handlers.FirstLayerHandler import FirstLayerHandler
+from solvers_cubes.solver3x3.handlers.SecondLayerHandler import SecondLayerHandler
+from solvers_cubes.solver3x3.handlers.YellowCrossHandler import YellowCrossHandler
+from solvers_cubes.solver3x3.handlers.LastCornersHandler import LastCornersHandler 
 
 class Solver3x3:
     """ solver 3x3 """

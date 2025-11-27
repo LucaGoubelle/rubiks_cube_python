@@ -1,7 +1,7 @@
 """ first layer handler """
 
 from pyrubik.data.cube import Cube
-from solver3x3.handlers.handler import Handler
+from solvers_cubes.solver3x3.handlers.handler import Handler
 
 
 class FirstLayerHandler(Handler):

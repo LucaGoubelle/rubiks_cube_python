@@ -1,7 +1,7 @@
 """ white cross handler """
 
 from pyrubik.data.cube import Cube
-from solver3x3.handlers.handler import Handler
+from solvers_cubes.solver3x3.handlers.handler import Handler
 from solver_helpers.scanners.cube_3x3_scanner import Cube3x3Scanner
 
 class WhiteCrossHandler(Handler):
