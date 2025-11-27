@@ -2,10 +2,10 @@
 
 from pyrubik.data.cube import Cube
 
-from solver2x2.processors.first_face.wbo_processor import WBOProcessor
-from solver2x2.processors.first_face.wgo_processor import WGOProcessor
-from solver2x2.processors.first_face.wgr_processor import WGRProcessor
-from solver2x2.handlers.handler import Handler
+from solvers_cubes.solver2x2.processors.first_face.wbo_processor import WBOProcessor
+from solvers_cubes.solver2x2.processors.first_face.wgo_processor import WGOProcessor
+from solvers_cubes.solver2x2.processors.first_face.wgr_processor import WGRProcessor
+from solvers_cubes.solver2x2.handlers.handler import Handler
 
 from solver_helpers.seekers.corner_2_seeker import Corner2Seeker
 

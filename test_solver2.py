@@ -1,6 +1,6 @@
 import sys; sys.dont_write_bytecode=True
 
-from solver2x2.solver_2x2 import Solver2x2
+from solvers_cubes.solver2x2.solver_2x2 import Solver2x2
 
 from pyrubik.data.cube import Cube
 from pyrubik.data.cube_builder import CubeBuilder

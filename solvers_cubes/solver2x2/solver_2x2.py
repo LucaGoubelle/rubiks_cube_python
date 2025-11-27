@@ -2,9 +2,9 @@
 
 from pyrubik.data.cube import Cube
 
-from solver2x2.handlers.first_layer_handler import FirstLayerHandler
-from solver2x2.handlers.last_layer_handler import LastLayerHandler
-from solver2x2.handlers.start_handler import StartHandler
+from solvers_cubes.solver2x2.handlers.first_layer_handler import FirstLayerHandler
+from solvers_cubes.solver2x2.handlers.last_layer_handler import LastLayerHandler
+from solvers_cubes.solver2x2.handlers.start_handler import StartHandler
 
 
 class Solver2x2:

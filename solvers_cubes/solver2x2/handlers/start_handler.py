@@ -5,8 +5,8 @@ from pyrubik.data.cube import Cube
 from solver_helpers.scanners.cube_2x2_scanner import Cube2x2Scanner
 from solver_helpers.seekers.corner_2_seeker import Corner2Seeker
 
-from solver2x2.processors.first_face.wbr_processor import WBRProcessor
-from solver2x2.handlers.handler import Handler
+from solvers_cubes.solver2x2.processors.first_face.wbr_processor import WBRProcessor
+from solvers_cubes.solver2x2.handlers.handler import Handler
 
 
 class StartHandler(Handler):

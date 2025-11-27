@@ -1,9 +1,10 @@
 """ last layer handler """
 from pyrubik.data.cube import Cube
 
-from solver2x2.processors.last_face.oll_processor import OLLProcessor
-from solver2x2.processors.last_face.pll_processor import PLLProcessor
-from solver2x2.handlers.handler import Handler
+from solvers_cubes.solver2x2.processors.last_face.oll_processor import OLLProcessor
+from solvers_cubes.solver2x2.processors.last_face.pll_processor import PLLProcessor
+from solvers_cubes.solver2x2.handlers.handler import Handler
+
 from solver_helpers.advanced.oll_scanner import OLLScanner
 from solver_helpers.advanced.pll_scanner import PLLScanner
 
