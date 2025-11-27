@@ -1,11 +1,11 @@
 """ solver kilominx """
 from pyminx.data.models.kilominx import Kilominx
 
-from solver_kilominx.handlers.start_handler import StartHandler
-from solver_kilominx.handlers.first_corners_handler import FirstCornersHandler
-from solver_kilominx.handlers.middle_corners_handler import MiddleCornersHandler
-from solver_kilominx.handlers.last_first_corners_handler import LastFirstCornersHandler
-from solver_kilominx.handlers.last_corners_handler import LastCornersHandler
+from solvers_minxs.solver_kilominx.handlers.start_handler import StartHandler
+from solvers_minxs.solver_kilominx.handlers.first_corners_handler import FirstCornersHandler
+from solvers_minxs.solver_kilominx.handlers.middle_corners_handler import MiddleCornersHandler
+from solvers_minxs.solver_kilominx.handlers.last_first_corners_handler import LastFirstCornersHandler
+from solvers_minxs.solver_kilominx.handlers.last_corners_handler import LastCornersHandler
 
 
 class SolverKilominx:

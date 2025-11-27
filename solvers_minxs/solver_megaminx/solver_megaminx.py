@@ -1,17 +1,17 @@
 """ solver megaminx """
 from pyminx.data.models.megaminx import Megaminx
 
-from solver_megaminx.handlers.first_face.first_corners_handler import FirstCornersHandler
-from solver_megaminx.handlers.first_face.start_handler import StartHandler
-from solver_megaminx.handlers.first_face.white_star_handler import WhiteStarHandler
+from solvers_minxs.solver_megaminx.handlers.first_face.first_corners_handler import FirstCornersHandler
+from solvers_minxs.solver_megaminx.handlers.first_face.start_handler import StartHandler
+from solvers_minxs.solver_megaminx.handlers.first_face.white_star_handler import WhiteStarHandler
 
-from solver_megaminx.handlers.last_face.grey_star_handler import GreyStarHandler
-from solver_megaminx.handlers.last_face.last_corners_handler import LastCornersHandler
+from solvers_minxs.solver_megaminx.handlers.last_face.grey_star_handler import GreyStarHandler
+from solvers_minxs.solver_megaminx.handlers.last_face.last_corners_handler import LastCornersHandler
 
-from solver_megaminx.handlers.last_first_layer_handler import LastFirstLayerHandler
-from solver_megaminx.handlers.middle_corners_handler import MiddleCornersHandler
-from solver_megaminx.handlers.prisms_handler import PrismsHandler
-from solver_megaminx.handlers.second_layer_handler import SecondLayerHandler
+from solvers_minxs.solver_megaminx.handlers.last_first_layer_handler import LastFirstLayerHandler
+from solvers_minxs.solver_megaminx.handlers.middle_corners_handler import MiddleCornersHandler
+from solvers_minxs.solver_megaminx.handlers.prisms_handler import PrismsHandler
+from solvers_minxs.solver_megaminx.handlers.second_layer_handler import SecondLayerHandler
 
 
 class SolverMegaminx:
