@@ -9,5 +9,4 @@ v - add exceptions in pyminx
 v - implement mutliMoves in abs minx mover
 v - add drawerFactory
 v - Add generical scramble method
-~ - implement first corners processors in kilominx solver
-- put all solvers in solvers_cubes module
+v - put all solvers in solvers_cubes module
