@@ -5,7 +5,7 @@ class MinxPGDrawer:
     """ Minx PG drawer """
     
     def draw(self, screen, cube):
-        # todo: thin about inheritance (code inject) for this mother class
+        # todo: think about inheritance (code inject) for this mother class
         pass
 
     def _draw_sticker(self, screen, elem, pts):

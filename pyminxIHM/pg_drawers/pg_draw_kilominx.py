@@ -1,5 +1,4 @@
 """ draw kilominx """
-import pygame
 from pyminxIHM.pg_drawers.minx_pg_drawer import MinxPGDrawer
 
 class PGKilominxDrawer(MinxPGDrawer):
