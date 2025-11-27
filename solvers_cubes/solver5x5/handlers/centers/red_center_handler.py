@@ -1,6 +1,6 @@
 """ red center handler """
 from pyrubik.data.cube import Cube
-from solver5x5.handlers.handler import Handler
+from solvers_cubes.solver5x5.handlers.handler import Handler
 
 
 class RedCenterHandler(Handler):
