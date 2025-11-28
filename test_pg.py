@@ -1,5 +1,5 @@
 """ test pygame view """
-from pyminxIHM.views.pg_kilo_view import PygameKilominxView
+from pyminxIHM.views.pg_mega_view import PygameMegaminxView
 
-view = PygameKilominxView("Test01")
+view = PygameMegaminxView("Test01")
 view.run()
