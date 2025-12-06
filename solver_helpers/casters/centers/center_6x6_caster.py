@@ -1,0 +1,17 @@
+
+from solver_helpers.casters.centers.centers_caster import CentersCaster
+
+
+class Centers6x6Caster(CentersCaster):
+    """ center 6x6 caster """
+
+    def __init__(self):
+        self.size = 6
+
+    def _exctract_centers(self, actual_face):
+        return [
+            [actual_face[1][1], actual_face[1][2], actual_face[1][3], actual_face[1][4]],
+            [actual_face[2][1], actual_face[2][2], actual_face[2][3], actual_face[2][4]],
+            [actual_face[3][1], actual_face[3][2], actual_face[3][3], actual_face[3][4]],
+            [actual_face[4][1], actual_face[4][2], actual_face[4][3], actual_face[4][4]]
+        ]

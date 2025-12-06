@@ -1,7 +1,7 @@
 """ OLL Scanner """
 from pyrubik.data.cube import Cube
 from solver_helpers.crown_scanner import CrownScanner
-from solver_helpers.crown_caster import CrownCaster
+from solver_helpers.casters.crown_caster import CrownCaster
 
 class OLLScanner:
     """ 
