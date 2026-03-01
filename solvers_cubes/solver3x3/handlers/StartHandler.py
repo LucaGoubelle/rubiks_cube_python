@@ -1,10 +1,8 @@
 """ start handler """
-from typing import Dict
-
 from pyrubik.data.cube import Cube
 from solvers_cubes.solver3x3.handlers.handler import Handler
+from solvers_cubes.solver3x3.processors.start_processor import StartProcessor
 from solver_helpers.scanners.cube_3x3_scanner import Cube3x3Scanner
-
 
 class StartHandler(Handler):
     """ Start handler """
@@ -12,40 +10,10 @@ class StartHandler(Handler):
     def __init__(self):
         super().__init__()
         self.cube_scanner = Cube3x3Scanner()
+        self.proc = StartProcessor()
     
     def start(self, cube: Cube) -> Cube:
         result1: str = self.cube_scanner.scan_center(cube, "up")
         result2: str = self.cube_scanner.scan_center(cube, "front")
         result: str = result1 + "_" + result2
-        hmap: Dict[str,str] = {
-            "yellow_blue": "",
-            "yellow_green": "y2",
-            "yellow_red": "y'",
-            "yellow_orange": "y",
-            
-            "white_blue": "z2",
-            "white_green": "x2",
-            "white_red": "y z2",
-            "white_orange": "y x2",
-            
-            "green_white": "x z2",
-            "green_yellow": "x",
-            "green_red": "z y'",
-            "green_orange": "z' y",
-            
-            "blue_white": "x'",
-            "blue_yellow": "x y2",
-            "blue_red": "z' y'",
-            "blue_orange": "z y",
-            
-            "red_white": "z x'",
-            "red_yellow": "x y",
-            "red_blue": "z",
-            "red_green": "z x2",
-            
-            "orange_white": "x' y",
-            "orange_yellow": "x y'",
-            "orange_blue": "z'",
-            "orange_green": "z y2",
-        }
-        return self.mover.multi_moves(cube, hmap[result]) if result in hmap else cube
+        return self.mover.multi_moves(cube, self.proc.process(result))
