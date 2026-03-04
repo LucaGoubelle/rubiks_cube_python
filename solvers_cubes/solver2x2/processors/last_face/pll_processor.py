@@ -1,7 +1,7 @@
 from solver_helpers.cube_algorithms import CubeAlgorithms
+from solvers_cubes.solver2x2.processors.processor import Processor
 
-
-class PLLProcessor:
+class PLLProcessor(Processor):
     """ PLL Processor """
     
     def __init__(self):
@@ -18,7 +18,3 @@ class PLLProcessor:
             "GB_RO_BG_OR" : CubeAlgorithms.Y_PERM,
             "RO_BG_OR_GB" : CubeAlgorithms.Y_PERM
         }
-        
-    def process(self, input_data: str) -> str:
-        result: str = self.data[input_data] if input_data in self.data else "???"
-        return result

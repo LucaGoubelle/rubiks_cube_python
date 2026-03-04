@@ -1,5 +1,7 @@
 
-class WBRProcessor:
+from solvers_cubes.solver2x2.processors.processor import Processor
+
+class WBRProcessor(Processor):
     """ White blue red processor """
 
     def __init__(self):
@@ -36,6 +38,3 @@ class WBRProcessor:
             "down_front_right::red_white_blue" : "R' D'",
             "down_front_right::blue_red_white" : "F D"
         }
-    def process(self, input_data: str) -> str:
-        result: str = self.data[input_data] if input_data in self.data else "???"
-        return result

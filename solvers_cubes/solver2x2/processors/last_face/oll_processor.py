@@ -1,6 +1,7 @@
 from solver_helpers.cube_algorithms import CubeAlgorithms
+from solvers_cubes.solver2x2.processors.processor import Processor
 
-class OLLProcessor:
+class OLLProcessor(Processor):
     """ oll processor """
     
     def __init__(self):
@@ -41,7 +42,3 @@ class OLLProcessor:
             "10_0001_0001_10_" : "U2 "+CubeAlgorithms.PI_ORIENT,
             "11_0000_1001_00_" : "U' "+CubeAlgorithms.PI_ORIENT
         }
-        
-    def process(self, input_data: str) -> str:
-        result: str = self.data[input_data] if input_data in self.data else "???"
-        return result

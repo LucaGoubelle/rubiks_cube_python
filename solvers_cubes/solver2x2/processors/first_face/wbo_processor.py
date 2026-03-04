@@ -1,8 +1,8 @@
 
 from solver_helpers.cube_algorithms import CubeAlgorithms
+from solvers_cubes.solver2x2.processors.processor import Processor
 
-
-class WBOProcessor:
+class WBOProcessor(Processor):
     """ white blue orange processor """
 
     def __init__(self):
@@ -26,7 +26,3 @@ class WBOProcessor:
             "down_front_left::orange_white_blue" : "L' U L U' L' U L",
             "down_front_left::blue_orange_white" : "L' U' L U L' U' L"
         }
-
-    def process(self, input_data: str) -> str:
-        result: str = self.data[input_data] if input_data in self.data else "???"
-        return result

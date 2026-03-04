@@ -1,8 +1,8 @@
 
 from solver_helpers.cube_algorithms import CubeAlgorithms
+from solvers_cubes.solver2x2.processors.processor import Processor
 
-
-class WGRProcessor:
+class WGRProcessor(Processor):
     """ white green red processor """
     
     def __init__(self):
@@ -34,7 +34,3 @@ class WGRProcessor:
             "down_back_right::red_white_green" : "R' U R U' R' U R",
             "down_back_right::green_red_white" : "R' U' R U R' U' R"
         }
-        
-    def process(self, input_data: str) -> str:
-        result: str = self.data[input_data] if input_data in self.data else "???"
-        return result

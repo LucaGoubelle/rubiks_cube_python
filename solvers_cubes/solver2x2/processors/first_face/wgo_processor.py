@@ -1,5 +1,6 @@
+from solvers_cubes.solver2x2.processors.processor import Processor
 
-class WGOProcessor:
+class WGOProcessor(Processor):
     """ white green orange processor """
 
     def __init__(self):
@@ -27,7 +28,3 @@ class WGOProcessor:
             "down_back_left::orange_white_green" : "L U' L2",
             "down_back_left::green_orange_white" : "L2 U L'"
         }
-
-    def process(self, input_data: str) -> str:
-        result: str = self.data[input_data] if input_data in self.data else "???"
-        return result
