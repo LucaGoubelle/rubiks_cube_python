@@ -1,6 +1,7 @@
 """ start processor """
+from solvers_cubes.solver3x3.processors.processor import Processor
 
-class StartProcessor:
+class StartProcessor(Processor):
     """ start processor """
 
     def __init__(self):
@@ -35,7 +36,3 @@ class StartProcessor:
             "orange_blue": "z'",
             "orange_green": "z y2",
         }
-
-    
-    def process(self, input_data: str):
-        return self.data[input_data] if input_data in self.data else "???"
