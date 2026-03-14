@@ -1,14 +1,8 @@
 """ wbr processor """
+from solvers_minxs.solver_kilominx.processors.processor import Processor
 
-class WBRProcessor:
+class WBRProcessor(Processor):
     """ wbr processor """
 
     def __init__(self):
-        self.data = {}
-
-    def process(self, input_data: str) -> str:
-        """
-        process input information, return sequence of corresponding moves
-        @author: LucaGoubelle
-        """
-        return self.data[input_data] if input_data in self.data else "???"
+        super().__init__()
