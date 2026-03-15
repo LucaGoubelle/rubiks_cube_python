@@ -1,8 +1,8 @@
 """ white cross handler """
-
 from pyrubik.data.cube import Cube
 from solvers_cubes.solver3x3.handlers.handler import Handler
 from solver_helpers.scanners.cube_3x3_scanner import Cube3x3Scanner
+from solver_helpers.seekers.edge_3_seeker import Edge3Seeker
 
 class WhiteCrossHandler(Handler):
     """ white cross handler """
@@ -10,18 +10,7 @@ class WhiteCrossHandler(Handler):
     def __init__(self):
         super().__init__()
         self.cube_scanner = Cube3x3Scanner()
-    
-    
-    def _seek_edge(self, cube: Cube, colors1: str, colors2: str) -> str:
-        """ get the piece orientation """
-        targeted_orient: str = ""
-        edges: dict = self.cube_scanner.scan_edges(cube)
-        for k, v in edges.items():
-            if v==colors1 or v==colors2:
-                targeted_orient = k
-                break
-        return targeted_orient
-    
+        self.seeker = Edge3Seeker()
     
     def _processWB(self, cube: Cube, targeted_orient: str) -> Cube:
         """ enum moves case for orientations """
@@ -46,7 +35,7 @@ class WhiteCrossHandler(Handler):
 
     
     def _insertWB(self, cube: Cube) -> Cube:
-        targeted_orient: str = self._seek_edge(cube, "white_blue", "blue_white")
+        targeted_orient: str = self.seeker.seek_edge_orient(cube, "white_blue", "blue_white")
         cube = self._processWB(cube, targeted_orient)
         # verify orientation in slot
         final_verif: str = self.cube_scanner.scan_edge(cube, "down_front")
@@ -78,7 +67,7 @@ class WhiteCrossHandler(Handler):
     
     
     def _insertWR(self, cube: Cube) -> Cube:
-        targeted_orient: str = self._seek_edge(cube, "white_red", "red_white")
+        targeted_orient: str = self.seeker.seek_edge_orient(cube, "white_red", "red_white")
         cube = self._processWR(cube, targeted_orient)
         # verify orientation in slot
         final_verif: str = self.cube_scanner.scan_edge(cube, "down_right")
@@ -109,7 +98,7 @@ class WhiteCrossHandler(Handler):
     
     
     def _insertWG(self, cube: Cube) -> Cube:
-        targeted_orient: str = self._seek_edge(cube, "white_green", "green_white")
+        targeted_orient: str = self.seeker.seek_edge_orient(cube, "white_green", "green_white")
         cube = self._processWG(cube, targeted_orient)
         # verify orientation in slot
         final_verif: str = self.cube_scanner.scan_edge(cube, "down_back")
@@ -139,7 +128,7 @@ class WhiteCrossHandler(Handler):
     
     
     def _insertWO(self, cube: Cube) -> Cube:
-        targeted_orient: str = self._seek_edge(cube, "white_orange", "orange_white")
+        targeted_orient: str = self.seeker.seek_edge_orient(cube, "white_orange", "orange_white")
         cube = self._processWO(cube, targeted_orient)
         # verify orientation in slot
         final_Verif: str = self.cube_scanner.scan_edge(cube, "down_left")

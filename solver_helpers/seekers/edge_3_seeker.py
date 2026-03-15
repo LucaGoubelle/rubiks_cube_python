@@ -11,6 +11,16 @@ class Edge3Seeker:
 
     def __init__(self):
         self.scanner = Cube3x3Scanner()
+        
+    def seek_edge_orient(self, cube: Cube, colors1: str, colors2: str) -> str:
+        """ get the piece orientation """
+        targeted_orient: str = ""
+        edges: dict = self.cube_scanner.scan_edges(cube)
+        for k, v in edges.items():
+            if v==colors1 or v==colors2:
+                targeted_orient = k
+                break
+        return targeted_orient
     
     def seek_edge(self, cube: Cube, posibilities: List[str]) -> str:
         """
