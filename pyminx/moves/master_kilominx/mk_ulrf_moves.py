@@ -11,6 +11,6 @@ class MasterKilominxULRFMoves:
         return minx
 
     def move_U_prime(self, minx):
-        for i in range(4):
+        for _ in range(4):
             minx = self.move_U(minx)
         return minx

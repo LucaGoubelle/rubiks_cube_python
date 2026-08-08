@@ -32,7 +32,7 @@ class KilominxULRFMoves:
         return minx
 
     def move_U_prime(self, minx: Kilominx) -> Kilominx:
-        for i in range(4):
+        for _ in range(4):
             minx = self.move_U(minx)
         return minx
 
@@ -54,7 +54,7 @@ class KilominxULRFMoves:
         return minx
 
     def move_L_prime(self, minx: Kilominx) -> Kilominx:
-        for i in range(4):
+        for _ in range(4):
             minx = self.move_L(minx)
         return minx
 
@@ -76,7 +76,7 @@ class KilominxULRFMoves:
         return minx
 
     def move_R_prime(self, minx: Kilominx) -> Kilominx:
-        for i in range(4):
+        for _ in range(4):
             minx = self.move_R(minx)
         return minx
 
@@ -98,6 +98,6 @@ class KilominxULRFMoves:
         return minx
 
     def move_F_prime(self, minx: Kilominx) -> Kilominx:
-        for i in range(4):
+        for _ in range(4):
             minx = self.move_F(minx)
         return minx

@@ -1,9 +1,8 @@
 """ mk rotate helpers """
-from copy import deepcopy
 from pyminx.data.models.master_kilominx import Face
+from pyminx.moves.rotate_helpers import RotateHelpers
 
-
-class MasterKilominxRotateHelpers:
+class MasterKilominxRotateHelpers(RotateHelpers):
     """
     master kilominx rotate helpers
     @author: LucaGoubelle
@@ -16,14 +15,6 @@ class MasterKilominxRotateHelpers:
         @author: LucaGoubelle
         """
         return [[""] * 15, [""] * 5]
-
-    @staticmethod
-    def copy_face(face: Face) -> Face:
-        """
-        return a deep copy of provided face in param
-        @author: LucaGoubelle
-        """
-        return deepcopy(face)
 
     # todo: implement rotate + async
 

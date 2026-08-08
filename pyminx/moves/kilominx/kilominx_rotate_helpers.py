@@ -1,9 +1,8 @@
 """ rotate helpers """
-from copy import deepcopy
 from pyminx.data.models.kilominx import Face
+from pyminx.moves.rotate_helpers import RotateHelpers
 
-
-class KilominxRotateHelpers:
+class KilominxRotateHelpers(RotateHelpers):
     """ 
     kilominx rotate utils 
     @author: LucaGoubelle
@@ -16,15 +15,6 @@ class KilominxRotateHelpers:
         @author: LucaGoubelle
         """
         return [""] * 5
-
-    
-    @staticmethod
-    def copy_face(face: Face) -> Face:
-        """
-        return a deep copy of the provided face param
-        @author: LucaGoubelle
-        """
-        return deepcopy(face)
 
     
     @staticmethod
@@ -67,7 +57,7 @@ class KilominxRotateHelpers:
         rotate a face clockwise twice 
         @author: LucaGoubelle
         """
-        for i in range(2):
+        for _ in range(2):
             face = KilominxRotateHelpers.rotate(face)
         return face
 
@@ -78,7 +68,7 @@ class KilominxRotateHelpers:
         rotate a face counter-clockwise twice 
         @author: LucaGoubelle
         """
-        for i in range(2):
+        for _ in range(2):
             face = KilominxRotateHelpers.rotate_async(face)
         return face
 

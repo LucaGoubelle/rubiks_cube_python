@@ -49,6 +49,6 @@ class KilominxAxisMoves:
         in counter clockwise
         @author: LucaGoubelle
         """
-        for i in range(4):
+        for _ in range(4):
             minx = self.move_y(minx)
         return minx

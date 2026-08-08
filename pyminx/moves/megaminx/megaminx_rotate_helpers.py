@@ -1,8 +1,8 @@
-from copy import deepcopy
+""" megaminx rotate helpers """
 from pyminx.data.models.megaminx import Face
+from pyminx.moves.rotate_helpers import RotateHelpers
 
-
-class MegaminxRotateHelper:
+class MegaminxRotateHelper(RotateHelpers):
     """
     megaminx rotate helper
     @author: LucaGoubelle
@@ -15,14 +15,6 @@ class MegaminxRotateHelper:
         @author: LucaGoubelle
         """
         return [[""] * 10, [""]]
-    
-    @staticmethod
-    def copy_face(face: Face) -> Face:
-        """
-        return a deep copy of a provided face in param
-        @author: LucaGoubelle
-        """
-        return deepcopy(face)
     
     @staticmethod
     def rotate(face: Face) -> Face:
